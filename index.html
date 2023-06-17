@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Add a default marker to a web map</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+    <style>
+        body { margin: 0; padding: 0; }
+        #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+    </style>
+</head>
+<body>
+<div id="map"></div>
+
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1Ijoic3ZvYm9kYS1yYWJzdHZvIiwiYSI6ImNsajBleDNrcDB2dmIzaXFxb2dra285YWUifQ.bKyDama2jjM-rIm50iipsA';
+    const map = new mapboxgl.Map({
+        container: 'map',
+    // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+        style: 'mapbox://styles/mapbox/navigation-night-v1',
+        center: [32.9466964,  33.1918507],
+        zoom: 2
+    });
+
+    // Create a default Marker and add it to the map.
+    // 17.06.23
+    // Lada A - Paris // 2.3290809999999773, 48.8641569163857
+    // Andrei K. - Jerusalem // 35.23417944687389 31.776875474711265
+    // Alexander - Warsaw // 21.012229000000005, 52.229676
+    // Larisa - Kiev // 30.516543, 50.449013000000015
+    // Vlad - Vancouver // -123.08479150000001, 49.270666559119654
+    // HLEB - Warsaw  // 21.012229000000005, 52.229676
+    // Olga - Lisbon // -9.315356999999995, 38.74515970973788
+    // Olga V. - Jerusalem // 35.23417944687389 31.776875474711265
+    // Микола - Tbilisi // 44.857864000000006, 41.724180999999994
+    // Olha R. - Kiev // 30.516543, 50.449013000000015
+    // Zahid Z. - Seoul // 126.80414825000001, 37.52500199494659
+    // Ruster - Jerusalem // 35.23417944687389 31.776875474711265
+    // Olga - New_York // -74.04785199999999, 40.705628000000004
+    // Спартак - Kiev // 30.516543, 50.449013000000015
+    // Елена - Kiev // 30.516543, 50.449013000000015
+    // Леся - Kiev // 30.516543, 50.449013000000015
+    // Илья - Almaty // 78.0211105б, 43.27120566471035
+    // Tatsiana - Tbilisi / 44.857864000000006, 41.724180999999994
+    // Daria S. - Winnipeg // -102.2876116, 53.8432059
+
+    const paris = new mapboxgl.Marker()
+        .setLngLat([2.3290809999999773, 48.8641569163857])
+        .addTo(map);
+
+    const jerusalem = new mapboxgl.Marker()
+        .setLngLat([35.23417944687389, 31.776875474711265])
+        .addTo(map);
+
+    const warsaw = new mapboxgl.Marker()
+        .setLngLat([21.012229000000005, 52.229676 ])
+        .addTo(map);
+
+    const kiev = new mapboxgl.Marker()
+        .setLngLat([30.516543, 50.449013000000015])
+        .addTo(map);
+
+    const vancouver = new mapboxgl.Marker()
+        .setLngLat([-123.08479150000001, 49.270666559119654])
+        .addTo(map);
+
+    const Lisbon = new mapboxgl.Marker()
+        .setLngLat([-9.315356999999995, 38.74515970973788 ])
+        .addTo(map);
+
+    const Tbilisi = new mapboxgl.Marker()
+        .setLngLat([44.857864000000006, 41.724180999999994 ])
+        .addTo(map);
+
+    const Seoul = new mapboxgl.Marker()
+        .setLngLat([ 126.80414825000001, 37.52500199494659 ])
+        .addTo(map);
+
+    const New_York  = new mapboxgl.Marker()
+        .setLngLat([-74.04785199999999, 40.705628000000004 ])
+        .addTo(map);
+
+    const Almaty = new mapboxgl.Marker()
+        .setLngLat([78.0211105, 43.27120566471035 ])
+        .addTo(map);
+    const  Winnipeg = new mapboxgl.Marker()
+        .setLngLat([-102.2876116, 53.8432059])
+        .addTo(map);
+</script>
+
+</body>
+</html>
